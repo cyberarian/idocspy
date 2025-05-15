@@ -503,13 +503,20 @@ def display_admin_tab():
                                     "provider": provider_used,
                                     "chunk_size": current_chunk_size, # <-- Add chunk_size
                                     "chunk_overlap": current_chunk_overlap, # <-- Add chunk_overlap
-                                    "keywords": rm_suggestions.get("suggested_keywords", []) if rm_suggestions else []
+                                    "keywords": rm_suggestions.get("suggested_keywords", []) if rm_suggestions else [],
+                                    # --- ADD MISSING FIELDS for DB record ---
+                                    "index_path": os.path.basename(index_save_path),
+                                    "chunks_path": os.path.basename(chunks_save_path),
+                                    "tokenized_chunks_path": os.path.basename(tokenized_chunks_save_path),
+                                    "rm_suggestions_json": json.dumps(rm_suggestions) if rm_suggestions else json.dumps({}),
+                                    "original_metadata_json": json.dumps(original_metadata_from_upload) if original_metadata_from_upload else json.dumps({})
                                 }
                                 insert_record(db_record_to_insert)
                                 # Invalidate the cached DataFrame in session state so it reloads
                                 st.session_state.records_df = None
 
                             except Exception as e:
+                                st.error(f"Error during DB insertion or manifest update: {e}") # Added more specific error
                                 st.error(f"Error saving index or chunks: {e}")
                                 # Clean up potentially corrupted files if saving failed
                                 if os.path.exists(index_save_path): os.remove(index_save_path)

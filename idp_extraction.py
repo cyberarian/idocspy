@@ -402,8 +402,8 @@ Anda adalah asisten AI yang sangat teliti dan membantu. Tugas Anda adalah menjaw
         # Using a capable model like llama3 is recommended for better instruction following and formatting
         # model_to_use = "llama3-70b-8192" # Example: Consider using Llama 3 70b if available/suitable
         # model_to_use = "deepseek-r1-distill-llama-70b" # Or stick with Mixtral if Llama 3 isn't available/preferred
-        # model_to_use = "meta-llama/llama-4-maverick-17b-128e-instruct" # Keep if this is the intended model
-        model_to_use = "gemini-2.5-pro-preview-05-06" 
+        model_to_use = "meta-llama/llama-4-maverick-17b-128e-instruct" # Keep if this is the intended model
+        # model_to_use = "gemini-2.5-pro-preview-05-06" 
         st.info(f"Using model for Q&A: {model_to_use}") # Optional: Log which model is used
 
         response = client.chat.completions.create(

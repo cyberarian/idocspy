@@ -92,14 +92,13 @@ def show_landing_page():
         <div class="landing-content">
             <h2>IDocspy: Intelligent Document Processing & Analysis Assistant</h2>
             <p>
-            Apakah Anda kewalahan menghadapi tumpukan dokumen? IDocspy hadir sebagai solusi berbasis kecerdasan buatan (AI) untuk membantu Anda memproses, memahami, dan melakukan kueri terhadap laporan, catatan, serta dokumen teknis secara lebih cepat dan akurat. Ubah dokumen statis menjadi sumber pengetahuan interaktif dan aset informasi yang berharga.
+            Apakah Anda kewalahan menghadapi tumpukan dokumen? IDocspy menyediakan solusi berbasis kecerdasan buatan (AI) untuk membantu Anda memproses, memahami, dan melakukan kueri terhadap laporan, catatan, serta dokumen teknis secara lebih cepat dan akurat. Ubah dokumen statis menjadi sumber pengetahuan interaktif dan aset informasi yang berharga.
             </p>
             <h3>Process, Analyze, Interact</h3>
             <p>
-            IDocspy akan mengekstraksi teks, menyarankan klasifikasi, mengidentifikasi kata kunci penting, serta membangun indeks pencarian yang dapat digunakan secara semantik. Ajukan pertanyaan menggunakan bahasa alami, dan sistem akan menyajikan jawaban kontekstual langsung dari isi dokumen Anda. Unggah beragam format dokumen termasuk <strong>PDF, gambar, dan teks</strong>. IDocspy secara cerdas akan:
+            IDocspy secara cerdas akan melakukan:
             <ul>
-                <li>Melakukan ekstraksi teks menggunakan berbagai penyedia OCR (seperti Groq, Google Gemini, Mistral) atau ekstraksi langsung untuk PDF digital.</li>
-                <li>Secara otomatis mendeteksi dan mengekstrak <strong>tabel</strong> dari PDF, menyimpannya dalam format terstruktur (JSON) dan mereferensikannya dalam teks untuk pemahaman kontekstual yang lebih baik oleh AI.</li>
+                <li>Ekstraksi teks menggunakan berbagai provider OCR (Llama 4, Gemini, etc).</li>
                 <li>Menghasilkan <strong>saran manajemen rekod (RM)</strong> berbasis AI, termasuk klasifikasi dokumen, kata kunci relevan, dan potensi penandaan informasi sensitif.</li>
                 <li>Membangun indeks pencarian canggih menggunakan kombinasi <strong>pencarian semantik (FAISS) dan pencarian kata kunci (BM25)</strong>, yang disatukan melalui Reciprocal Rank Fusion (RRF) untuk hasil yang optimal.</li>
                 <li>Mendukung fitur pencarian lanjutan seperti HyDE (Hypothetical Document Embeddings) dan re-ranking untuk akurasi yang lebih tinggi.</li>
@@ -107,7 +106,7 @@ def show_landing_page():
             </p>
             <h3>Siap Mengubah Alur Kerja Dokumen Anda?</h3
             <p>
-            Walaupun tidak dirancang sebagai sistem Electronic Document and Records Management System (EDRMS), IDocspy diharapkan dapat memberikan kontribusi strategis sebagai komponen pelengkap yang memperkaya fungsionalitas EDRMS, mendukung transformasi digital dokumen dan rekod melalui peningkatan pemahaman, ketelusuran, dan akuntabilitas pengelolaan informasi.
+            Walaupun tidak dirancang sebagai pengganti penuh sistem Electronic Document and Records Management System (EDRMS), IDocspy diharapkan dapat memberikan kontribusi strategis sebagai komponen pelengkap yang memperkaya fungsionalitas EDRMS. Aplikasi ini mendukung transformasi digital dokumen dan rekod melalui peningkatan pemahaman, ketelusuran, dan akuntabilitas pengelolaan informasi.
             </p>
             <div class="button-container">
     """, unsafe_allow_html=True)

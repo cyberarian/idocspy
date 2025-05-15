@@ -1,0 +1,82 @@
+{
+    "a098babe-b8dd-46c3-b0fa-b076197ebb20_cs500_co50": {
+        "original_filename": "2105.01117v1-Archives and AI.pdf",
+        "index_path": "a098babe-b8dd-46c3-b0fa-b076197ebb20_cs500_co50.index",
+        "chunks_path": "a098babe-b8dd-46c3-b0fa-b076197ebb20_cs500_co50_chunks.pkl",
+        "tokenized_chunks_path": "a098babe-b8dd-46c3-b0fa-b076197ebb20_cs500_co50_tok_chunks.pkl",
+        "chunk_size": 500,
+        "chunk_overlap": 50,
+        "processed_timestamp": "2025-05-15T13:56:59.224035",
+        "original_metadata": {
+            "Filename": "2105.01117v1-Archives and AI.pdf",
+            "File Type": "application/pdf",
+            "Page Count": 22,
+            "Title": "Archives and AI: A survey",
+            "Author": "",
+            "Subject": "",
+            "Creation Date": "N/A",
+            "Modification Date": "N/A",
+            "File Size (KB)": "363.08"
+        },
+        "rm_suggestions": {
+            "suggested_classification": "Dokumen Teknis",
+            "suggested_keywords": [
+                "Archives",
+                "Artificial Intelligence",
+                "Recordkeeping",
+                "Machine Learning"
+            ],
+            "sensitivity_flags": [
+                {
+                    "type": "PII",
+                    "reason": "Presence of names and email addresses of authors"
+                },
+                {
+                    "type": "Academic",
+                    "reason": "Discussion of academic research and references to specific studies"
+                }
+            ]
+        },
+        "table_files": [
+            "a098babe-b8dd-46c3-b0fa-b076197ebb20_cs500_co50_table_0.json",
+            "a098babe-b8dd-46c3-b0fa-b076197ebb20_cs500_co50_table_1.json",
+            "a098babe-b8dd-46c3-b0fa-b076197ebb20_cs500_co50_table_2.json"
+        ]
+    },
+    "cbc4e61f-d403-4551-a631-d27dee919964_cs500_co50": {
+        "original_filename": "2105.01117v1-Archives and AI.pdf",
+        "index_path": "cbc4e61f-d403-4551-a631-d27dee919964_cs500_co50.index",
+        "chunks_path": "cbc4e61f-d403-4551-a631-d27dee919964_cs500_co50_chunks.pkl",
+        "tokenized_chunks_path": "cbc4e61f-d403-4551-a631-d27dee919964_cs500_co50_tok_chunks.pkl",
+        "chunk_size": 500,
+        "chunk_overlap": 50,
+        "processed_timestamp": "2025-05-15T14:18:33.088760",
+        "original_metadata": {
+            "Filename": "2105.01117v1-Archives and AI.pdf",
+            "File Type": "application/pdf",
+            "Page Count": 22,
+            "Title": "Archives and AI: A survey",
+            "Author": "",
+            "Subject": "",
+            "Creation Date": "N/A",
+            "Modification Date": "N/A",
+            "File Size (KB)": "363.08"
+        },
+        "rm_suggestions": {
+            "suggested_classification": "Dokumen Teknis",
+            "suggested_keywords": [
+                "Archives",
+                "Recordkeeping",
+                "Artificial Intelligence",
+                "Machine Learning",
+                "Digital Transformation"
+            ],
+            "sensitivity_flags": []
+        },
+        "table_files": [
+            "cbc4e61f-d403-4551-a631-d27dee919964_cs500_co50_table_0.json",
+            "cbc4e61f-d403-4551-a631-d27dee919964_cs500_co50_table_1.json",
+            "cbc4e61f-d403-4551-a631-d27dee919964_cs500_co50_table_2.json"
+        ]
+    }
+}

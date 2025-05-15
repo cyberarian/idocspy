@@ -134,38 +134,9 @@ def display_chatbot_tab():
 
     # --- Q&A Section (only if a document is successfully loaded) ---
     if st.session_state.get("current_doc_index") is not None and st.session_state.get("current_doc_chunks") is not None and st.session_state.get("current_doc_tokenized_chunks") is not None:
-        st.markdown("---")
+
         st.markdown(f"#### Ask a question about **{st.session_state.current_doc_display_name}**")
         st.caption(f"(Indexed with Chunk Size: {st.session_state.get('current_doc_chunk_size', 'N/A')}, Overlap: {st.session_state.get('current_doc_chunk_overlap', 'N/A')})")
-
-        # --- Display RM Info in Expander ---
-        with st.expander("Show Document Info & AI Suggestions"):
-            rm_suggestions = st.session_state.get("current_doc_rm_suggestions", {})
-            original_metadata = st.session_state.get("current_doc_original_metadata", {})
-
-            st.markdown("**Original Metadata:**")
-            orig_fn = original_metadata.get("Filename", st.session_state.current_doc_display_name) # Fallback
-            st.markdown(f"- **Filename:** {orig_fn}")
-            if original_metadata.get("Title") and original_metadata.get("Title") != "N/A":
-                 st.markdown(f"- **Title:** {original_metadata.get('Title')}")
-            if original_metadata.get("Author") and original_metadata.get("Author") != "N/A":
-                 st.markdown(f"- **Author:** {original_metadata.get('Author')}")
-            if original_metadata.get("Creation Date") and original_metadata.get("Creation Date") != "N/A":
-                 st.markdown(f"- **Created:** {original_metadata.get('Creation Date')}")
-
-            st.markdown("**AI Content Analysis:**")
-            if rm_suggestions:
-                st.markdown(f"- **Suggested Classification:** `{rm_suggestions.get('suggested_classification', 'N/A')}`")
-                keywords = rm_suggestions.get('suggested_keywords', [])
-                st.markdown(f"- **Suggested Keywords:** `{', '.join(keywords) if keywords else 'None'}`")
-                sensitivity = rm_suggestions.get('sensitivity_flags', [])
-                if sensitivity:
-                    flags = [f"`{flag.get('type', '?')}` ({flag.get('reason', 'N/A')})" for flag in sensitivity]
-                    st.markdown(f"- **Sensitivity Flags:** {'; '.join(flags)}")
-                else:
-                    st.markdown("- **Sensitivity Flags:** `None detected`")
-            else:
-                st.caption("AI suggestions not available for this document.")
 
         # --- User Query Input ---
         user_query = st.text_area("Your question:", key="user_query_input_main", height=100)

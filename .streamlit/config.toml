@@ -5,6 +5,9 @@ secondaryBackgroundColor = "#1E1E1E"
 textColor = "#FAFAFA"
 font = "sans serif"
 
+[server]
+maxUploadSize = 5 # Sets the limit to 5MB
+
 [custom_css]
 css = """
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
